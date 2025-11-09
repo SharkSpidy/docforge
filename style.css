@@ -1,0 +1,71 @@
+:root{
+  --bg:#0f0b16;
+  --card:#17121b;
+  --accent:#7c4dff;
+  --muted:#bdb6d6;
+  --text:#e9e7ff;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#0b0710,#0f0b16);color:var(--text)}
+.top{padding:28px 18px;text-align:center}
+.top h1{margin:0;font-size:28px}
+.tag{color:var(--muted);margin-top:6px}
+
+.container{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px;max-width:1100px;margin:0 auto}
+form{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+label{display:block;margin-bottom:10px;color:var(--muted);font-size:14px}
+input,textarea,select{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:var(--text);resize:vertical}
+.actions{display:flex;gap:10px;margin-top:10px}
+button{background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:white;cursor:pointer}
+button.muted{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+.output-area{background:var(--card);padding:12px;border-radius:12px;display:flex;flex-direction:column}
+.toolbar{display:flex;gap:8px;justify-content:flex-end;margin-bottom:8px}
+#output{min-height:300px;font-family:Menlo,monospace;font-size:13px;padding:12px;border-radius:8px;background:#0a0810;color:var(--text);border:1px solid rgba(255,255,255,0.03)}
+.preview{background:#fff;color:#000;padding:12px;border-radius:8px;overflow:auto;min-height:150px}
+.hidden{display:none}
+.footer{text-align:center;color:var(--muted);padding:18px 0}
+@media(max-width:900px){
+  .container{grid-template-columns:1fr;padding:12px}
+}
+.footer {
+  background-color: #0a0a0a;
+  color: #aaa;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer p {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.footer strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 30px 10px;
+    font-size: 14px;
+  }
+}
+.footer {
+  box-shadow: 0 -2px 20px rgba(255, 255, 255, 0.05);
+}

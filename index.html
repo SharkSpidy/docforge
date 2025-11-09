@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DocForge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>⚡ DocForge</h1>
+    <p class="tag">Generate a clean README.md in seconds — copy or download.</p>
+  </header>
+
+  <main class="container">
+    <form id="readme-form" onsubmit="return false;">
+      <label>Project Name
+        <input id="name" placeholder="My Awesome Project" />
+      </label>
+
+      <label>Short Description
+        <textarea id="desc" rows="2" placeholder="What does this project do?"></textarea>
+      </label>
+
+      <label>Installation (commands)
+        <textarea id="install" rows="2" placeholder="npm install ..."></textarea>
+      </label>
+
+      <label>Usage (examples)
+        <textarea id="usage" rows="3" placeholder="How to use the project"></textarea>
+      </label>
+
+      <label>Features (comma separated)
+        <input id="features" placeholder="CLI, API, Docker" />
+      </label>
+
+      <label>License
+        <select id="license">
+          <option>MIT</option>
+          <option>Apache-2.0</option>
+          <option>GPL-3.0</option>
+          <option>Unlicense</option>
+          <option>Proprietary</option>
+        </select>
+      </label>
+
+      <label>Author GitHub Username
+        <input id="author" placeholder="your-github-username" />
+      </label>
+
+      <div class="actions">
+        <button id="generate" type="button">Generate README</button>
+        <button id="clear" type="button" class="muted">Clear</button>
+      </div>
+    </form>
+
+    <section class="output-area">
+      <div class="toolbar">
+        <button id="copy">Copy</button>
+        <button id="download">Download .md</button>
+        <button id="previewToggle" class="muted">Toggle Preview</button>
+      </div>
+
+      <textarea id="output" readonly placeholder="Your generated README will appear here..."></textarea>
+
+      <div id="preview" class="preview hidden"></div>
+    </section>
+  </main>
+
+    <footer class="footer">
+      <p>
+      Made with ❤️ by <strong>Joe</strong> • 
+      <a href="https://buymeacoffee.com/sharkspidy" target="_blank" rel="noopener">
+      ☕ Support me
+      </a>
+     </p>
+    </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
